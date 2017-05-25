@@ -23,7 +23,7 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
-public class textController {
+public class uploadFileController {
  
 @SuppressWarnings({ "unchecked", "unused" })
 @RequestMapping(value = "/doUpload.do", method = RequestMethod.POST)
@@ -92,7 +92,7 @@ public class textController {
 						} 
 				    }
 				if (extName.equals(".zip")) {
-					textController.unZip(savePath + name,filepath);
+					uploadFileController.unZip(savePath + name,filepath);
 				}
 				File filezip=new File(filepath+name);//将解压缩前的解压缩文件地址
     				filezip.delete();//删除上传的压缩包，只剩下解压文件
